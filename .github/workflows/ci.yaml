@@ -58,7 +58,8 @@ jobs:
       - name: Run MongoDB integration tests
         run: tox -v -e ${{ env.PYTHON_VERSION }}-linux-integration-py-mongodb -- -v
       - name: Run kafka integration tests
-        run: tox -v ${{ env.PYTHON_VERSION }}-linux-integration-py-kafka -- -v
+        if: !contains([pypy-3.7, pypy-3.8], matrix.python-version)
+        run: tox -v -e ${{ env.PYTHON_VERSION }}-linux-integration-py-kafka -- -v
 
   #################### Linters and checkers ####################
   lint:
