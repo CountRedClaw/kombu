@@ -58,7 +58,7 @@ jobs:
       - name: Run MongoDB integration tests
         run: tox -v -e ${{ env.PYTHON_VERSION }}-linux-integration-py-mongodb -- -v
       - name: Run kafka integration tests
-        run: tox -v -e ${{ env.PYTHON_VERSION }}-linux-integration-py-kafka -- -v
+        run: tox -v ${{ env.PYTHON_VERSION }}-linux-integration-py-kafka -- -v
 
   #################### Linters and checkers ####################
   lint:
