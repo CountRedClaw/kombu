@@ -4,7 +4,7 @@ Kafka transport using confluent-kafka library.
 
 **References**
 
-- https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html
+- http://docs.confluent.io/current/clients/confluent-kafka-python
 
 **Limitations**
 
